@@ -1,0 +1,1 @@
+rootProject.name = "patio-de-juegos-programacion-funcional"
