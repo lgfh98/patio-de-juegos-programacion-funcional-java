@@ -1,7 +1,13 @@
-package org.example.amigoscode.combinator;
+package org.example.amigoscode._05_combinator;
 
 import java.time.LocalDate;
 
+/**
+ * Modelo de Dominio: Customer
+ * -------------------------------------------------------------
+ * Entidad inmutable que representa los datos de un cliente
+ * sujetos a reglas de validación de negocio (email, teléfono, mayoría de edad).
+ */
 public class Customer {
 
     private final String name;

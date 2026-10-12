@@ -1,4 +1,4 @@
-package org.example.amigoscode.functionalinterface;
+package org.example.amigoscode._02_functionalinterface;
 
 import java.util.function.BiPredicate;
 import java.util.function.Function;

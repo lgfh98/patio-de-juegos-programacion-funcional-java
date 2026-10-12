@@ -1,4 +1,4 @@
-package org.example.amigoscode.streams;
+package org.example.amigoscode._03_streams;
 
 import java.util.List;
 import java.util.Set;
@@ -7,8 +7,29 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import static org.example.amigoscode.streams._Stream.Gender.*;
+import static org.example.amigoscode._03_streams._Stream.Gender.*;
 
+/**
+ * Guía Didáctica: Java Streams API
+ * -------------------------------------------------------------
+ * MENTAL MODEL:
+ * - Un Stream NO es una estructura de datos ni almacena elementos.
+ * - Es una abstracción computacional que transporta datos desde una fuente
+ *   (colección, array, I/O) a través de un pipeline de operaciones declarativas.
+ *
+ * CICLO DE VIDA DE UN STREAM:
+ * 1. Fuente (Source): people.stream()
+ * 2. Operaciones Intermedias (Lazy):
+ *    - No procesan nada por sí mismas hasta que haya una operación terminal.
+ *    - Retornan un nuevo Stream para permitir encadenamiento (.map, .filter, .distinct).
+ * 3. Operación Terminal (Eager):
+ *    - Desencadena la ejecución de todo el pipeline y cierra el Stream (.collect, .toList, .forEach).
+ *    - Un Stream consumido NO puede reutilizarse.
+ *
+ * EVALUACIÓN CORTOCIRCUITADA (SHORT-CIRCUITING):
+ * - Operaciones como allMatch, anyMatch y noneMatch detienen la iteración tan pronto
+ *   como el resultado lógico queda determinado, maximizando la eficiencia.
+ */
 public class _Stream {
     public static void main(String[] args) {
         List<Person> people = List.of(
